@@ -77,6 +77,18 @@ RAG means **Retrieval-Augmented Generation**:
 Without RAG, model answers from its training knowledge only.  
 With RAG, model can answer from your own docs.
 
+### Popular Official RAG Illustration
+
+<p align="center">
+  <img
+    src="https://cdn.sanity.io/images/vr8gru94/production/f6fe392bb5287791a2c6052f1eeb3072ad0b7e36-2236x2620.png"
+    alt="Traditional RAG architecture diagram from Pinecone official learning center"
+    width="760"
+  />
+</p>
+
+Source: [Pinecone Learning Center - Retrieval-Augmented Generation (RAG)](https://www.pinecone.io/learn/retrieval-augmented-generation/)
+
 ### Concept Flow
 
 ```mermaid
