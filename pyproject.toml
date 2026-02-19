@@ -1,0 +1,39 @@
+[project]
+name = "langchain-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "black>=26.1.0",
+    "certifi>=2026.1.4",
+    "fastapi>=0.129.0",
+    "firecrawl-py>=4.14.1",
+    "isort>=7.0.0",
+    "jinja2>=3.1.6",
+    "langchain>=1.2.5,<2.0.0",
+    "langchain-chroma>=1.1.0",
+    "langchain-classic>=1.0.1,<2.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-ollama>=1.0.1,<2.0.0",
+    "langchain-pinecone>=0.2.13",
+    "langchain-tavily>=0.2.17,<1.0.0",
+    "langchainhub>=0.1.21",
+    "langsmith>=0.6.6",
+    "nltk>=3.9.2",
+    "openai>=2.17.0",
+    "pillow>=12.1.1",
+    "python-dotenv>=1.2.1",
+    "streamlit>=1.54.0",
+    "streamlit-chat>=0.1.1",
+    "tiktoken>=0.12.0",
+    "tqdm>=4.67.3",
+    "unstructured>=0.20.2",
+    "uvicorn>=0.40.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
