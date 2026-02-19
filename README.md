@@ -1,5 +1,19 @@
 # LangChain RAG Assistant (Ollama + Pinecone + Streamlit)
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B3D91,100:0F9D58&height=170&section=header&text=LangChain%20RAG%20Assistant&fontSize=34&fontColor=ffffff&animation=fadeIn" alt="LangChain RAG Assistant banner" />
+</p>
+
+<p align="center">
+  <img alt="Python 3.13+" src="https://img.shields.io/badge/Python-3.13%2B-3776AB?logo=python&logoColor=white" />
+  <img alt="LangChain" src="https://img.shields.io/badge/LangChain-Orchestration-1C3C3C" />
+  <img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit&logoColor=white" />
+  <img alt="Ollama" src="https://img.shields.io/badge/Ollama-Local%20LLM-111111" />
+  <img alt="Pinecone" src="https://img.shields.io/badge/Pinecone-Vector%20DB-0F6FFF" />
+  <img alt="Chroma" src="https://img.shields.io/badge/Chroma-Local%20Vector%20Store-6A1B9A" />
+  <img alt="Tavily" src="https://img.shields.io/badge/Tavily-Web%20Crawl-0EA5E9" />
+</p>
+
 This project builds a Retrieval-Augmented Generation (RAG) assistant using:
 
 - `Ollama` for local open-source chat and embedding models
@@ -11,6 +25,12 @@ This project builds a Retrieval-Augmented Generation (RAG) assistant using:
 - `LangSmith` (optional) for tracing and debugging
 
 ## What This Repository Implements
+
+<p align="left">
+  <img alt="ingestion.py pipeline" src="https://img.shields.io/badge/ingestion.py-Crawl%20%2B%20Chunk%20%2B%20Embed-16A34A" />
+  <img alt="backend/core.py runtime" src="https://img.shields.io/badge/backend%2Fcore.py-Retrieve%20%2B%20Generate-2563EB" />
+  <img alt="webapp.py ui" src="https://img.shields.io/badge/webapp.py-Chat%20UI%20%2B%20Sources-F97316" />
+</p>
 
 There are 3 main runtime components:
 
@@ -40,6 +60,13 @@ There are 3 main runtime components:
 - If Pinecone is empty or misconfigured, the web app cannot retrieve useful context.
 
 ## RAG Basics (Beginner Visual)
+
+<p align="left">
+  <img alt="R - Retrieval" src="https://img.shields.io/badge/R-Retrieval-0284C7" />
+  <img alt="A - Augmentation" src="https://img.shields.io/badge/A-Augmentation-0F766E" />
+  <img alt="G - Generation" src="https://img.shields.io/badge/G-Generation-9333EA" />
+  <img alt="Top-k search" src="https://img.shields.io/badge/Top--k-4%20(backend%2Fcore.py)-4B5563" />
+</p>
 
 RAG means **Retrieval-Augmented Generation**:
 
@@ -143,6 +170,14 @@ sequenceDiagram
 ---
 
 ## Prerequisites
+
+<p align="left">
+  <img alt="Python required" src="https://img.shields.io/badge/Python-3.13%2B-3776AB?logo=python&logoColor=white" />
+  <img alt="Ollama required" src="https://img.shields.io/badge/Ollama-Required-111111" />
+  <img alt="Pinecone required for query-time" src="https://img.shields.io/badge/Pinecone-Required%20for%20query--time-0F6FFF" />
+  <img alt="Tavily required for crawl" src="https://img.shields.io/badge/Tavily-Required%20for%20crawl-0EA5E9" />
+  <img alt="LangSmith optional" src="https://img.shields.io/badge/LangSmith-Optional-6D28D9" />
+</p>
 
 - Python `>=3.13` (as defined in `pyproject.toml`)
 - [uv](https://docs.astral.sh/uv/) (recommended) or pip
@@ -333,6 +368,17 @@ LANGCHAIN_TRACING_V2=true
 ---
 
 ## Run the Project
+
+### End-to-End Run Flow (Visual)
+
+```mermaid
+flowchart LR
+  E[Configure .env] --> I[Run ingestion.py]
+  I --> P[Pinecone index populated]
+  P --> W[Run webapp.py]
+  W --> Q[Ask question]
+  Q --> A[Answer + source links]
+```
 
 ### A) Ingest documentation into vector stores
 
